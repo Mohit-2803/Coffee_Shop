@@ -1,0 +1,23 @@
+# Ignore node_modules for both frontend and backend
+client/node_modules/
+server/node_modules/
+
+# Ignore environment variables for both client and server
+client/.env
+server/.env
+
+# Ignore logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore build/dist files (optional)
+client/dist/
+server/dist/
+
+# Ignore .DS_Store (macOS specific)
+.DS_Store
+
+# Ignore service file for firebase
+server/service-account-key.json
