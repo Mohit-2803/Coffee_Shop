@@ -21,3 +21,12 @@ server/dist/
 
 # Ignore service file for firebase
 server/service-account-key.json
+
+# Code Counter
+.VSCodeCounter
+
+# Ignore Python virtual environment
+ml-service/venv/
+
+# Fake data generator
+FakerData/

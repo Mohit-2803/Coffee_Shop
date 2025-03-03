@@ -24,9 +24,12 @@ const app = express();
 // This route will receive the raw body for Stripe signature verification.
 app.use("/api/payment/webhook", express.raw({ type: "application/json" }));
 
+// Firebase
+// Parse JSON string from the environment variable
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 // Initialize Firebase Admin
 admin.initializeApp({
-  credential: admin.credential.cert(require("./service-account-key.json")),
+  credential: admin.credential.cert(serviceAccount),
 });
 
 // Middleware
