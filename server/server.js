@@ -1,27 +1,44 @@
+// Load environment variables
 require("dotenv").config();
 const admin = require("firebase-admin");
 
 try {
   // Get the raw service account string from the environment variable
-  const serviceAccountString = process.env.FIREBASE_SERVICE_ACCOUNT;
+  let serviceAccountString = process.env.FIREBASE_SERVICE_ACCOUNT;
   console.log("Raw service account string:", serviceAccountString);
 
-  // Parse the JSON
+  // Trim any accidental whitespace
+  serviceAccountString = serviceAccountString.trim();
+
+  // Parse the JSON string
   const serviceAccount = JSON.parse(serviceAccountString);
   console.log("Parsed service account object:", serviceAccount);
 
-  // Replace literal '\\n' with actual newline characters
-  serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, "\n");
+  // Replace literal "\\n" with actual newline characters in the private key
+  if (typeof serviceAccount.private_key === "string") {
+    serviceAccount.private_key = serviceAccount.private_key.replace(
+      /\\n/g,
+      "\n"
+    );
+  } else {
+    throw new Error("private_key property is missing or not a string.");
+  }
 
-  // Initialize Firebase Admin with the corrected service account
+  // Ensure client_email is a string and trim any extra whitespace
+  if (typeof serviceAccount.client_email !== "string") {
+    throw new Error("client_email property is missing or not a string.");
+  }
+  serviceAccount.client_email = serviceAccount.client_email.trim();
+
+  // Initialize Firebase Admin with the corrected service account object
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
   });
+  console.log("Firebase Admin initialized successfully.");
 } catch (err) {
   console.error("Error initializing Firebase Admin:", err);
 }
 
-// Continue with your server setup
 const express = require("express");
 const cors = require("cors");
 const { connectDB } = require("./config/db");
@@ -43,6 +60,7 @@ const trendingRoutes = require("./routes/trendingRoutes");
 const app = express();
 
 // Mount the webhook route first using express.raw()
+// This route will receive the raw body for Stripe signature verification.
 app.use("/api/payment/webhook", express.raw({ type: "application/json" }));
 
 // Middleware
