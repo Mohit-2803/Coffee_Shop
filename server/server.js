@@ -1,7 +1,29 @@
-const express = require("express");
-const cors = require("cors");
 require("dotenv").config();
 const admin = require("firebase-admin");
+
+try {
+  // Get the raw service account string from the environment variable
+  const serviceAccountString = process.env.FIREBASE_SERVICE_ACCOUNT;
+  console.log("Raw service account string:", serviceAccountString);
+
+  // Parse the JSON
+  const serviceAccount = JSON.parse(serviceAccountString);
+  console.log("Parsed service account object:", serviceAccount);
+
+  // Replace literal '\\n' with actual newline characters
+  serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, "\n");
+
+  // Initialize Firebase Admin with the corrected service account
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
+} catch (err) {
+  console.error("Error initializing Firebase Admin:", err);
+}
+
+// Continue with your server setup
+const express = require("express");
+const cors = require("cors");
 const { connectDB } = require("./config/db");
 const connectMongoDB = require("./config/mongodb");
 const authRoutes = require("./routes/authRoutes");
@@ -21,25 +43,14 @@ const trendingRoutes = require("./routes/trendingRoutes");
 const app = express();
 
 // Mount the webhook route first using express.raw()
-// This route will receive the raw body for Stripe signature verification.
 app.use("/api/payment/webhook", express.raw({ type: "application/json" }));
-
-// Firebase
-// Parse JSON string from the environment variable
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-// Initialize Firebase Admin
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 
-// Connect to MS-sql DB
+// Connect to databases
 connectDB();
-
-// Connect to MongoDB
 connectMongoDB();
 
 // Routes
