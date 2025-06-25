@@ -27,7 +27,7 @@ setInterval(() => {
   console.log(`Current image index: ${current}`);
 }, 4000);
 
-// Navbar blur Logic
+// Navbar blur effect Logic
 
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
@@ -59,4 +59,49 @@ filterButtons.forEach((button) => {
     filterButtons.forEach((button) => button.classList.remove("active"));
     button.classList.add("active");
   });
+});
+
+// Contact form validation
+const contactForm = document.querySelector(".contact-form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#message");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let valid = true;
+
+  // name validation
+  if (nameInput.value.trim() === "") {
+    document.querySelector(".form-name-error").textContent =
+      "Name is required.";
+    document.querySelector(".form-name-error").style.display = "block";
+    valid = false;
+  } else if (nameInput.value.length < 3) {
+    document.querySelector(".form-name-error").textContent =
+      "Name must be at least 3 characters long.";
+    document.querySelector(".form-name-error").style.display = "block";
+    valid = false;
+  } else {
+    nameInput.classList.remove("form-error");
+    document.querySelector(".form-name-error").style.display = "none";
+    document.querySelector(".form-name-error").textContent = "";
+  }
+
+  if (emailInput.value.trim() === "") {
+    document.querySelector(".form-email-error").textContent =
+      "Email is required.";
+    document.querySelector(".form-email-error").style.display = "block";
+    valid = false;
+  } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
+    document.querySelector(".form-email-error").textContent =
+      "Invalid email format.";
+    document.querySelector(".form-email-error").style.display = "block";
+    valid = false;
+  } else {
+    emailInput.classList.remove("form-error");
+    document.querySelector(".form-email-error").style.display = "none";
+    document.querySelector(".form-email-error").textContent = "";
+  }
 });
