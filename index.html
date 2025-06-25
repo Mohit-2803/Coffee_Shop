@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop | Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6a8bed72e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!------ NAVBAR ------>
+
+    <nav class="navbar">
+      <div class="logo">LOGO HERE</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="#search" class="icon"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></a>
+        <a href="#cart" class="icon"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+      </div>
+    </nav>
+
+    <!------ HERO SECTION ------>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Welcome to Coffee Shop</h1>
+        <p>
+          Your daily dose of happiness in a cup. Whether you’re kickstarting
+          your morning or taking a well-deserved break, every sip at Coffee Shop
+          is crafted to bring comfort, energy, and joy to your day. Because
+          great coffee isn’t just a drink — it’s a moment of bliss.
+        </p>
+
+        <a href="#menu" class="btn">Try Our Signature Latte</a>
+      </div>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img
+            src="public/pexels-rachel-claire-5864550.jpg"
+            alt="Cozy Coffee Shop"
+            class="active"
+          />
+          <img
+            src="public/pexels-nastyasensei-66707-331107.jpg"
+            alt="Fresh Coffee Cup"
+          />
+          <img
+            src="public/pexels-thngocbich-1658112.jpg"
+            alt="Delicious Pastries"
+          />
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+
+    <!------ ABOUT SECTION ------>
+
+    <section class="about" id="about">
+      <div class="about-image">
+        <img
+          src="public/pexels-apgpotr-683039.jpg"
+          alt="Barista Making Coffee"
+        />
+      </div>
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          At Coffee Shop, we believe in serving the finest coffee and pastries
+          with a smile. Our baristas are passionate about crafting the perfect
+          cup of coffee just for you. Whether you're grabbing a quick espresso
+          on the way to work or settling in with a latte and a good book, we’re
+          here to make your day a little brighter. From our freshly baked
+          pastries to our expertly brewed coffee, every detail is made with care
+          and love for our community.
+        </p>
+      </div>
+    </section>
+
+    <!------ MENU SECTION ------>
+
+    <section class="menu" id="menu">
+      <h2>Our Menu</h2>
+
+      <!-- Menu Categories -->
+      <div class="menu-categories">
+        <button class="menu-btn active" data-category="all">All</button>
+        <button class="menu-btn" data-category="beverage">Beverages</button>
+        <button class="menu-btn" data-category="dessert">Desserts</button>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="menu-items">
+        <!-- Coffees -->
+        <div class="menu-item">
+          <img
+            src="public/Menu/istockphoto-505168330-612x612.jpg"
+            alt="Espresso"
+          />
+          <h3>Espresso</h3>
+          <p>A rich and bold coffee experience.</p>
+        </div>
+        <div class="menu-item">
+          <img
+            src="public/Menu/Cappuccino-in-white-cup-on-a-saucer.jpg"
+            alt="Cappuccino"
+          />
+          <h3>Cappuccino</h3>
+          <p>Perfectly balanced with steamed milk and foam.</p>
+        </div>
+        <div class="menu-item">
+          <img src="public/Menu/latte.png" alt="Latte" />
+          <h3>Latte</h3>
+          <p>Smooth and creamy, a customer favorite.</p>
+        </div>
+        <div class="menu-item">
+          <img src="public/Menu/mocha_.jpg" alt="Mocha" />
+          <h3>Mocha</h3>
+          <p>Chocolatey delight with a shot of espresso.</p>
+        </div>
+        <div class="menu-item">
+          <img
+            src="public/Menu/istockphoto-482161231-612x612.jpg"
+            alt="Americano"
+          />
+          <h3>Americano</h3>
+          <p>Espresso with hot water for a smooth finish.</p>
+        </div>
+        <div class="menu-item">
+          <img
+            src="public/Menu/istockphoto-505168330-612x612.jpg"
+            alt="Fresh Pastry"
+          />
+          <h3>Fresh Pastry</h3>
+          <p>Oven-baked daily, perfect with any coffee.</p>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-item" data-category="dessert">
+          <img
+            src="public/Menu/istockphoto-505168330-612x612.jpg"
+            alt="Pastry"
+          />
+          <h3>Fresh Pastry</h3>
+          <p>Oven-baked daily, perfect with any coffee.</p>
+        </div>
+
+        <div class="menu-item" data-category="dessert">
+          <img src="public/Menu/cake.jpg" alt="Cake Slice" />
+          <h3>Chocolate Cake</h3>
+          <p>Rich and moist, topped with ganache.</p>
+        </div>
+      </div>
+    </section>
+
+    <!------ JAVASCRIPT ------>
+    <script src="app.js"></script>
+  </body>
+</html>
