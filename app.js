@@ -44,15 +44,19 @@ const menuItems = document.querySelectorAll(".menu-item");
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const filter = button.getAttribute("data-filter");
-    menuItems.forEach((item) => {
-      if (filter === "all" || item.classList.contains(filter)) {
-        item.style.display = "block";
+    const filter = button.getAttribute("data-category");
+
+    menuItems.forEach((menu_item) => {
+      if (
+        filter === "all" ||
+        menu_item.getAttribute("data-category") === filter
+      ) {
+        menu_item.style.display = "block";
       } else {
-        item.style.display = "none";
+        menu_item.style.display = "none";
       }
     });
-    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    filterButtons.forEach((button) => button.classList.remove("active"));
     button.classList.add("active");
   });
 });
