@@ -24,7 +24,6 @@ nextBtn.addEventListener("click", () => {
 setInterval(() => {
   current = (current + 1) % images.length;
   showImage(current);
-  console.log(`Current image index: ${current}`);
 }, 4000);
 
 // Navbar blur effect Logic
@@ -62,7 +61,7 @@ filterButtons.forEach((button) => {
 });
 
 // Contact form validation
-const contactForm = document.querySelector(".contact-form");
+const contactForm = document.querySelector(".reachus-form");
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
@@ -88,7 +87,7 @@ contactForm.addEventListener("submit", (e) => {
     document.querySelector(".form-name-error").style.display = "none";
     document.querySelector(".form-name-error").textContent = "";
   }
-
+  // email validation
   if (emailInput.value.trim() === "") {
     document.querySelector(".form-email-error").textContent =
       "Email is required.";
@@ -104,4 +103,52 @@ contactForm.addEventListener("submit", (e) => {
     document.querySelector(".form-email-error").style.display = "none";
     document.querySelector(".form-email-error").textContent = "";
   }
+  // message validation
+  if (messageInput.value.trim() === "") {
+    document.querySelector(".form-message-error").textContent =
+      "Message is required.";
+    document.querySelector(".form-message-error").style.display = "block";
+    valid = false;
+  } else if (messageInput.value.length < 10) {
+    document.querySelector(".form-message-error").textContent =
+      "Message must be at least 10 characters long.";
+    document.querySelector(".form-message-error").style.display = "block";
+    valid = false;
+  } else {
+    messageInput.classList.remove("form-error");
+    document.querySelector(".form-message-error").style.display = "none";
+    document.querySelector(".form-message-error").textContent = "";
+  }
+
+  // If all validations pass, submit the form
+  if (valid) {
+    const formData = new FormData(contactForm);
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+    contactForm.reset();
+    alert("form submitted successfully");
+  }
+});
+
+// Scroll Spy
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  let currentSectionId = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100; // adjust for header height
+    const sectionHeight = section.offsetHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      currentSectionId = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(currentSectionId)) {
+      link.classList.add("active");
+    }
+  });
 });
