@@ -30,7 +30,7 @@
       </ul>
       <div class="nav-icons">
         <a href="#search" class="nav-icon"
-          ><i class="fa-solid fa-magnifying-glass serch-icon"></i
+          ><i class="fa-solid fa-magnifying-glass search-icon"></i
         ></a>
         <!-- <a href="#cart" class="nav-icon"
           ><i class="fa-solid fa-cart-shopping"></i
@@ -41,371 +41,398 @@
       </div>
     </nav>
 
-    <!------ HERO SECTION ------>
+    <!------ MAIN CONTENT ------>
 
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h1>Welcome to Coffee Shop</h1>
-        <p>
-          Your daily dose of happiness in a cup. Whether you’re kickstarting
-          your morning or taking a well-deserved break, every sip at Coffee Shop
-          is crafted to bring comfort, energy, and joy to your day. Because
-          great coffee isn’t just a drink — it’s a moment of bliss.
-        </p>
+    <main>
+      <!------ HERO SECTION ------>
 
-        <a href="#menu" class="hero-btn">Try Our Signature Latte</a>
-      </div>
-      <div class="carousel">
-        <div class="carousel-images">
-          <img
-            src="public/pexels-rachel-claire-5864550.jpg"
-            alt="Cozy Coffee Shop"
-            class="active"
-          />
-          <img
-            src="public/pexels-nastyasensei-66707-331107.jpg"
-            alt="Fresh Coffee Cup"
-          />
-          <img
-            src="public/pexels-thngocbich-1658112.jpg"
-            alt="Delicious Pastries"
-          />
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <h1>Welcome to Coffee Shop</h1>
+          <p>
+            Your daily dose of happiness in a cup. Whether you’re kickstarting
+            your morning or taking a well-deserved break, every sip at Coffee
+            Shop is crafted to bring comfort, energy, and joy to your day.
+            Because great coffee isn’t just a drink — it’s a moment of bliss.
+          </p>
+
+          <a href="#menu" class="hero-btn">Try Our Signature Latte</a>
         </div>
-        <button class="carousel-btn prev">&#10094;</button>
-        <button class="carousel-btn next">&#10095;</button>
-      </div>
-    </section>
-
-    <!------ ABOUT SECTION ------>
-
-    <section class="about" id="about">
-      <div class="about-image">
-        <img
-          src="public/pexels-apgpotr-683039.jpg"
-          alt="Barista Making Coffee"
-        />
-      </div>
-      <div class="about-content">
-        <h2>About Us</h2>
-        <p>
-          At Coffee Shop, we believe in serving the finest coffee and pastries
-          with a smile. Our baristas are passionate about crafting the perfect
-          cup of coffee just for you. Whether you're grabbing a quick espresso
-          on the way to work or settling in with a latte and a good book, we’re
-          here to make your day a little brighter. From our freshly baked
-          pastries to our expertly brewed coffee, every detail is made with care
-          and love for our community.
-        </p>
-      </div>
-    </section>
-
-    <!------ MENU SECTION ------>
-
-    <section class="menu" id="menu">
-      <h2>Our Menu</h2>
-
-      <!-- Menu Categories -->
-      <div class="menu-categories">
-        <button class="menu-btn active" data-category="all">All</button>
-        <button class="menu-btn" data-category="beverage">Beverages</button>
-        <button class="menu-btn" data-category="dessert">Desserts</button>
-      </div>
-
-      <!-- Menu Items -->
-      <div class="menu-items">
-        <!-- Beverages -->
-        <div class="menu-item" data-category="beverage">
-          <img
-            src="public/Menu/istockphoto-505168330-612x612.jpg"
-            alt="Espresso"
-          />
-          <h3>Espresso</h3>
-          <p>A rich and bold coffee experience.</p>
-          <div class="menu-item-details">
-            <span class="price">₹180</span>
-            <span class="discount">10% off</span>
-            <span class="desc">Now only ₹162! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="beverage">
-          <img
-            src="public/Menu/Cappuccino-in-white-cup-on-a-saucer.jpg"
-            alt="Cappuccino"
-          />
-          <h3>Cappuccino</h3>
-          <p>Perfectly balanced with steamed milk and foam.</p>
-          <div class="menu-item-details">
-            <span class="price">₹200</span>
-            <span class="discount">15% off</span>
-            <span class="desc">Now only ₹170! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="beverage">
-          <img src="public/Menu/latte.png" alt="Latte" />
-          <h3>Latte</h3>
-          <p>Smooth and creamy, a customer favorite.</p>
-          <div class="menu-item-details">
-            <span class="price">₹210</span>
-            <span class="discount">10% off</span>
-            <span class="desc">Now only ₹189! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="public/Menu/mocha_.jpg" alt="Mocha" />
-          <h3>Mocha</h3>
-          <p>Chocolatey delight with a shot of espresso.</p>
-          <div class="menu-item-details">
-            <span class="price">₹220</span>
-            <span class="discount">10% off</span>
-            <span class="desc">Now only ₹198! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="beverage">
-          <img
-            src="public/Menu/istockphoto-482161231-612x612.jpg"
-            alt="Americano"
-          />
-          <h3>Americano</h3>
-          <p>Espresso with hot water for a smooth finish.</p>
-          <div class="menu-item-details">
-            <span class="price">₹170</span>
-            <span class="discount">10% off</span>
-            <span class="desc">Now only ₹153! Limited time offer.</span>
-          </div>
-        </div>
-
-        <!-- Desserts -->
-        <div class="menu-item" data-category="dessert">
-          <img
-            src="public/Menu/istockphoto-1418644931-612x612.jpg"
-            alt="Pastry"
-          />
-          <h3>Fresh Pastry</h3>
-          <p>Oven-baked daily, perfect with any coffee.</p>
-          <div class="menu-item-details">
-            <span class="price">₹150</span>
-            <span class="discount">5% off</span>
-            <span class="desc">Now only ₹142.50! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="dessert">
-          <img
-            src="public/Menu/istockphoto-1326149453-612x612.jpg"
-            alt="Cake Slice"
-          />
-          <h3>Chocolate Cake</h3>
-          <p>Rich and moist, topped with ganache.</p>
-          <div class="menu-item-details">
-            <span class="price">₹220</span>
-            <span class="discount">10% off</span>
-            <span class="desc">Now only ₹198! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="dessert">
-          <img src="public/Menu/cheesecake.jpg" alt="Cheesecake" />
-          <h3>Classic Cheesecake</h3>
-          <p>Creamy, smooth, and served with a berry compote.</p>
-          <div class="menu-item-details">
-            <span class="price">₹240</span>
-            <span class="discount">15% off</span>
-            <span class="desc">Now only ₹204! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="dessert">
-          <img src="public/Menu/fmachronies.jpg" alt="Macarons" />
-          <h3>French Macarons</h3>
-          <p>Light and airy with a sweet filling. Assorted flavors.</p>
-          <div class="menu-item-details">
-            <span class="price">₹180</span>
-            <span class="discount">10% off</span>
-            <span class="desc">Now only ₹162! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="dessert">
-          <img src="public/Menu/brownie.jpg" alt="Brownie" />
-          <h3>Chocolate Brownie</h3>
-          <p>Fudgy and rich with chunks of dark chocolate.</p>
-          <div class="menu-item-details">
-            <span class="price">₹160</span>
-            <span class="discount">5% off</span>
-            <span class="desc">Now only ₹152! Limited time offer.</span>
-          </div>
-        </div>
-
-        <div class="menu-item" data-category="dessert">
-          <img src="public/Menu/tiramisu.jpg" alt="Tiramisu" />
-          <h3>Tiramisu</h3>
-          <p>Layers of espresso-soaked ladyfingers and mascarpone.</p>
-          <div class="menu-item-details">
-            <span class="price">₹230</span>
-            <span class="discount">10% off</span>
-            <span class="desc">Now only ₹207! Limited time offer.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!------ CONTACT FORM ------>
-
-    <section class="contact" id="contact">
-      <div class="contact-form-header">
-        <h2>Reach Us</h2>
-      </div>
-
-      <div class="contact-form-body">
-        <div class="contact-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1277912242663!2d72.75916970709709!3d21.14731208369449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d8d96d2b733%3A0x1a5232e28e4094e4!2sEnactOn%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1750911621082!5m2!1sen!2sin"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            id="contact-map"
-          ></iframe>
-        </div>
-
-        <div class="cotact-form-div">
-          <div class="contact-form" id="contact-form">
-            <h3>Please reach us with any queries</h3>
-
-            <form action="" method="POST" class="reachus-form">
-              <label for="name"
-                >Name <input type="text" id="name" name="name" />
-                <p class="form-error form-name-error"></p>
-              </label>
-              <label for="email"
-                >Email <input type="email" id="email" name="email" />
-                <p class="form-error form-email-error"></p>
-              </label>
-              <label for="message"
-                >Message <textarea id="message" name="message"></textarea>
-                <p class="form-error form-message-error"></p>
-              </label>
-              <button type="submit" class="contact-form-btn">
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!------ REVIEWS SECTION ------>
-
-    <section class="reviews" id="reviews">
-      <div class="reviews-header">
-        <h2>What Our Customers Say</h2>
-      </div>
-
-      <div class="reviews-slider-container">
-        <div class="reviews-blur blur-left"></div>
-        <div class="reviews-slider-track">
-          <div class="review-card">
-            <img src="public/pexels-alex-tech-2152698203-32366567.jpg" alt="" />
-            <p>
-              “The best cappuccino I've ever had — smooth, rich, and
-              comforting.”
-            </p>
-            <h4>- Anjali Mehta</h4>
-          </div>
-
-          <div class="review-card">
-            <img src="public/pexels-alex-tech-2152698203-32366567.jpg" alt="" />
-            <p>“Absolutely love the cozy atmosphere and friendly staff.”</p>
-            <h4>- Rahul Verma</h4>
-          </div>
-
-          <div class="review-card">
-            <img src="public/pexels-boko-shots-812604874-32401767.jpg" alt="" />
-            <p>“A hidden gem in the city. I stop by almost every weekend.”</p>
-            <h4>- Tanya Desai</h4>
-          </div>
-
-          <div class="review-card">
+        <div class="carousel">
+          <div class="carousel-images">
             <img
-              src="public/pexels-charm-andaya-205356019-32397865.jpg"
-              alt=""
+              src="public/pexels-rachel-claire-5864550.jpg"
+              alt="Cozy Coffee Shop"
+              class="active"
             />
-            <p>“Their pastries are heaven! Highly recommend the cheesecake.”</p>
-            <h4>- Kunal Bansal</h4>
-          </div>
-
-          <div class="review-card">
-            <img src="public/pexels-davegarcia-32403506.jpg" alt="" />
-            <p>
-              “Perfect place to work or relax. Great Wi-Fi and even better
-              coffee.”
-            </p>
-            <h4>- Sneha Rao</h4>
-          </div>
-
-          <div class="review-card">
-            <img src="public/pexels-tuichupanh-32382344.jpg" alt="" />
-            <p>“Warm vibes, great music, and a latte I dream about daily.”</p>
-            <h4>- Ritesh Sharma</h4>
-          </div>
-
-          <!-- duplicates for slider -->
-          <div class="review-card">
-            <img src="public/pexels-alex-tech-2152698203-32366567.jpg" alt="" />
-            <p>
-              “The best cappuccino I've ever had — smooth, rich, and
-              comforting.”
-            </p>
-            <h4>- Anjali Mehta</h4>
-          </div>
-
-          <div class="review-card">
-            <img src="public/pexels-alex-tech-2152698203-32366567.jpg" alt="" />
-            <p>“Absolutely love the cozy atmosphere and friendly staff.”</p>
-            <h4>- Rahul Verma</h4>
-          </div>
-
-          <div class="review-card">
-            <img src="public/pexels-boko-shots-812604874-32401767.jpg" alt="" />
-            <p>“A hidden gem in the city. I stop by almost every weekend.”</p>
-            <h4>- Tanya Desai</h4>
-          </div>
-
-          <div class="review-card">
             <img
-              src="public/pexels-charm-andaya-205356019-32397865.jpg"
-              alt=""
+              src="public/pexels-nastyasensei-66707-331107.jpg"
+              alt="Fresh Coffee Cup"
             />
-            <p>“Their pastries are heaven! Highly recommend the cheesecake.”</p>
-            <h4>- Kunal Bansal</h4>
+            <img
+              src="public/pexels-thngocbich-1658112.jpg"
+              alt="Delicious Pastries"
+            />
+          </div>
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </section>
+
+      <!------ ABOUT SECTION ------>
+
+      <section class="about" id="about">
+        <div class="about-image">
+          <img
+            src="public/pexels-apgpotr-683039.jpg"
+            alt="Barista Making Coffee"
+          />
+        </div>
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>
+            At Coffee Shop, we believe in serving the finest coffee and pastries
+            with a smile. Our baristas are passionate about crafting the perfect
+            cup of coffee just for you. Whether you're grabbing a quick espresso
+            on the way to work or settling in with a latte and a good book,
+            we’re here to make your day a little brighter. From our freshly
+            baked pastries to our expertly brewed coffee, every detail is made
+            with care and love for our community.
+          </p>
+        </div>
+      </section>
+
+      <!------ MENU SECTION ------>
+
+      <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+
+        <!-- Menu Categories -->
+        <div class="menu-categories">
+          <button class="menu-btn active" data-category="all">All</button>
+          <button class="menu-btn" data-category="beverage">Beverages</button>
+          <button class="menu-btn" data-category="dessert">Desserts</button>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="menu-items">
+          <!-- Beverages -->
+          <div class="menu-item" data-category="beverage">
+            <img
+              src="public/Menu/istockphoto-505168330-612x612.jpg"
+              alt="Espresso"
+            />
+            <h3>Espresso</h3>
+            <p>A rich and bold coffee experience.</p>
+            <div class="menu-item-details">
+              <span class="price">₹180</span>
+              <span class="discount">10% off</span>
+              <span class="desc">Now only ₹162! Limited time offer.</span>
+            </div>
           </div>
 
-          <div class="review-card">
-            <img src="public/pexels-davegarcia-32403506.jpg" alt="" />
-            <p>
-              “Perfect place to work or relax. Great Wi-Fi and even better
-              coffee.”
-            </p>
-            <h4>- Sneha Rao</h4>
+          <div class="menu-item" data-category="beverage">
+            <img
+              src="public/Menu/Cappuccino-in-white-cup-on-a-saucer.jpg"
+              alt="Cappuccino"
+            />
+            <h3>Cappuccino</h3>
+            <p>Perfectly balanced with steamed milk and foam.</p>
+            <div class="menu-item-details">
+              <span class="price">₹200</span>
+              <span class="discount">15% off</span>
+              <span class="desc">Now only ₹170! Limited time offer.</span>
+            </div>
           </div>
 
-          <div class="review-card">
-            <img src="public/pexels-tuichupanh-32382344.jpg" alt="" />
-            <p>“Warm vibes, great music, and a latte I dream about daily.”</p>
-            <h4>- Ritesh Sharma</h4>
+          <div class="menu-item" data-category="beverage">
+            <img src="public/Menu/latte.png" alt="Latte" />
+            <h3>Latte</h3>
+            <p>Smooth and creamy, a customer favorite.</p>
+            <div class="menu-item-details">
+              <span class="price">₹210</span>
+              <span class="discount">10% off</span>
+              <span class="desc">Now only ₹189! Limited time offer.</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-category="beverage">
+            <img src="public/Menu/mocha_.jpg" alt="Mocha" />
+            <h3>Mocha</h3>
+            <p>Chocolatey delight with a shot of espresso.</p>
+            <div class="menu-item-details">
+              <span class="price">₹220</span>
+              <span class="discount">10% off</span>
+              <span class="desc">Now only ₹198! Limited time offer.</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-category="beverage">
+            <img
+              src="public/Menu/istockphoto-482161231-612x612.jpg"
+              alt="Americano"
+            />
+            <h3>Americano</h3>
+            <p>Espresso with hot water for a smooth finish.</p>
+            <div class="menu-item-details">
+              <span class="price">₹170</span>
+              <span class="discount">10% off</span>
+              <span class="desc">Now only ₹153! Limited time offer.</span>
+            </div>
+          </div>
+
+          <!-- Desserts -->
+          <div class="menu-item" data-category="dessert">
+            <img
+              src="public/Menu/istockphoto-1418644931-612x612.jpg"
+              alt="Pastry"
+            />
+            <h3>Fresh Pastry</h3>
+            <p>Oven-baked daily, perfect with any coffee.</p>
+            <div class="menu-item-details">
+              <span class="price">₹150</span>
+              <span class="discount">5% off</span>
+              <span class="desc">Now only ₹142.50! Limited time offer.</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-category="dessert">
+            <img
+              src="public/Menu/istockphoto-1326149453-612x612.jpg"
+              alt="Cake Slice"
+            />
+            <h3>Chocolate Cake</h3>
+            <p>Rich and moist, topped with ganache.</p>
+            <div class="menu-item-details">
+              <span class="price">₹220</span>
+              <span class="discount">10% off</span>
+              <span class="desc">Now only ₹198! Limited time offer.</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-category="dessert">
+            <img src="public/Menu/cheesecake.jpg" alt="Cheesecake" />
+            <h3>Classic Cheesecake</h3>
+            <p>Creamy, smooth, and served with a berry compote.</p>
+            <div class="menu-item-details">
+              <span class="price">₹240</span>
+              <span class="discount">15% off</span>
+              <span class="desc">Now only ₹204! Limited time offer.</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-category="dessert">
+            <img src="public/Menu/fmachronies.jpg" alt="Macarons" />
+            <h3>French Macarons</h3>
+            <p>Light and airy with a sweet filling. Assorted flavors.</p>
+            <div class="menu-item-details">
+              <span class="price">₹180</span>
+              <span class="discount">10% off</span>
+              <span class="desc">Now only ₹162! Limited time offer.</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-category="dessert">
+            <img src="public/Menu/brownie.jpg" alt="Brownie" />
+            <h3>Chocolate Brownie</h3>
+            <p>Fudgy and rich with chunks of dark chocolate.</p>
+            <div class="menu-item-details">
+              <span class="price">₹160</span>
+              <span class="discount">5% off</span>
+              <span class="desc">Now only ₹152! Limited time offer.</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-category="dessert">
+            <img src="public/Menu/tiramisu.jpg" alt="Tiramisu" />
+            <h3>Tiramisu</h3>
+            <p>Layers of espresso-soaked ladyfingers and mascarpone.</p>
+            <div class="menu-item-details">
+              <span class="price">₹230</span>
+              <span class="discount">10% off</span>
+              <span class="desc">Now only ₹207! Limited time offer.</span>
+            </div>
           </div>
         </div>
-        <div class="reviews-blur blur-right"></div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FOOTER -->
+      <!------ CONTACT FORM ------>
+
+      <section class="contact" id="contact">
+        <div class="contact-form-header">
+          <h2>Reach Us</h2>
+        </div>
+
+        <div class="contact-form-body">
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1277912242663!2d72.75916970709709!3d21.14731208369449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d8d96d2b733%3A0x1a5232e28e4094e4!2sEnactOn%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1750911621082!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              id="contact-map"
+            ></iframe>
+          </div>
+
+          <div class="cotact-form-div">
+            <div class="contact-form" id="contact-form">
+              <h3>Please reach us with any queries</h3>
+
+              <form action="" method="POST" class="reachus-form">
+                <label for="name"
+                  >Name <input type="text" id="name" name="name" />
+                  <p class="form-error form-name-error"></p>
+                </label>
+                <label for="email"
+                  >Email <input type="email" id="email" name="email" />
+                  <p class="form-error form-email-error"></p>
+                </label>
+                <label for="message"
+                  >Message <textarea id="message" name="message"></textarea>
+                  <p class="form-error form-message-error"></p>
+                </label>
+                <button type="submit" class="contact-form-btn">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------ REVIEWS SECTION ------>
+
+      <section class="reviews" id="reviews">
+        <div class="reviews-header">
+          <h2>What Our Customers Say</h2>
+        </div>
+
+        <div class="reviews-slider-container">
+          <div class="reviews-blur blur-left"></div>
+          <div class="reviews-slider-track">
+            <div class="review-card">
+              <img
+                src="public/pexels-alex-tech-2152698203-32366567.jpg"
+                alt=""
+              />
+              <p>
+                “The best cappuccino I've ever had — smooth, rich, and
+                comforting.”
+              </p>
+              <h4>- Anjali Mehta</h4>
+            </div>
+
+            <div class="review-card">
+              <img
+                src="public/pexels-alex-tech-2152698203-32366567.jpg"
+                alt=""
+              />
+              <p>“Absolutely love the cozy atmosphere and friendly staff.”</p>
+              <h4>- Rahul Verma</h4>
+            </div>
+
+            <div class="review-card">
+              <img
+                src="public/pexels-boko-shots-812604874-32401767.jpg"
+                alt=""
+              />
+              <p>“A hidden gem in the city. I stop by almost every weekend.”</p>
+              <h4>- Tanya Desai</h4>
+            </div>
+
+            <div class="review-card">
+              <img
+                src="public/pexels-charm-andaya-205356019-32397865.jpg"
+                alt=""
+              />
+              <p>
+                “Their pastries are heaven! Highly recommend the cheesecake.”
+              </p>
+              <h4>- Kunal Bansal</h4>
+            </div>
+
+            <div class="review-card">
+              <img src="public/pexels-davegarcia-32403506.jpg" alt="" />
+              <p>
+                “Perfect place to work or relax. Great Wi-Fi and even better
+                coffee.”
+              </p>
+              <h4>- Sneha Rao</h4>
+            </div>
+
+            <div class="review-card">
+              <img src="public/pexels-tuichupanh-32382344.jpg" alt="" />
+              <p>“Warm vibes, great music, and a latte I dream about daily.”</p>
+              <h4>- Ritesh Sharma</h4>
+            </div>
+
+            <!-- duplicates for slider -->
+            <div class="review-card">
+              <img
+                src="public/pexels-alex-tech-2152698203-32366567.jpg"
+                alt=""
+              />
+              <p>
+                “The best cappuccino I've ever had — smooth, rich, and
+                comforting.”
+              </p>
+              <h4>- Anjali Mehta</h4>
+            </div>
+
+            <div class="review-card">
+              <img
+                src="public/pexels-alex-tech-2152698203-32366567.jpg"
+                alt=""
+              />
+              <p>“Absolutely love the cozy atmosphere and friendly staff.”</p>
+              <h4>- Rahul Verma</h4>
+            </div>
+
+            <div class="review-card">
+              <img
+                src="public/pexels-boko-shots-812604874-32401767.jpg"
+                alt=""
+              />
+              <p>“A hidden gem in the city. I stop by almost every weekend.”</p>
+              <h4>- Tanya Desai</h4>
+            </div>
+
+            <div class="review-card">
+              <img
+                src="public/pexels-charm-andaya-205356019-32397865.jpg"
+                alt=""
+              />
+              <p>
+                “Their pastries are heaven! Highly recommend the cheesecake.”
+              </p>
+              <h4>- Kunal Bansal</h4>
+            </div>
+
+            <div class="review-card">
+              <img src="public/pexels-davegarcia-32403506.jpg" alt="" />
+              <p>
+                “Perfect place to work or relax. Great Wi-Fi and even better
+                coffee.”
+              </p>
+              <h4>- Sneha Rao</h4>
+            </div>
+
+            <div class="review-card">
+              <img src="public/pexels-tuichupanh-32382344.jpg" alt="" />
+              <p>“Warm vibes, great music, and a latte I dream about daily.”</p>
+              <h4>- Ritesh Sharma</h4>
+            </div>
+          </div>
+          <div class="reviews-blur blur-right"></div>
+        </div>
+      </section>
+    </main>
+
+    <!------ FOOTER ------->
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-logo">
@@ -447,5 +474,23 @@
 
     <!------ JAVASCRIPT ------>
     <script src="app.js"></script>
+
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="modal">
+      <div class="modal-content">
+        <h2>Welcome to Website!</h2>
+        <p>
+          Enjoy your visit to Brewery and uncover our exclusive seasonal brews,
+          curated tasting flights, and members-only discounts. From hoppy IPAs
+          to smooth stouts, there’s something to delight every palate—plus
+          special events and giveaways all week long.
+        </p>
+
+        <div class="modal-actions">
+          <button id="signup-btn">Sign Up</button>
+          <button id="skip-btn">Skip for now</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

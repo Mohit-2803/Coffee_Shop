@@ -1,5 +1,4 @@
 // Carousel Logic
-
 const images = document.querySelectorAll(".carousel-images img");
 const prevBtn = document.querySelector(".carousel-btn.prev");
 const nextBtn = document.querySelector(".carousel-btn.next");
@@ -131,7 +130,7 @@ contactForm.addEventListener("submit", (e) => {
   }
 });
 
-// Scroll Spy
+// To change color of navbar links on scroll
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links a");
@@ -151,4 +150,28 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
     }
   });
+});
+
+// MODAL LOGIC
+window.addEventListener("DOMContentLoaded", function () {
+  const isVisited = localStorage.getItem("brewery-visited");
+  const viewportWidth = window.innerWidth;
+
+  if (!isVisited && viewportWidth >= 900) {
+    const modal = document.getElementById("welcome-modal");
+    const signupBtn = document.getElementById("signup-btn");
+    const skipBtn = document.getElementById("skip-btn");
+    localStorage.setItem("brewery-visited", "true");
+    // display the modal
+    modal.style.display = "block";
+    // close modal function
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    signupBtn.addEventListener("click", closeModal);
+    skipBtn.addEventListener("click", closeModal);
+  } else if (!isVisited && viewportWidth < 900) {
+    localStorage.setItem("brewery-visited", "true");
+  }
 });
