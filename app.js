@@ -175,3 +175,26 @@ window.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("brewery-visited", "true");
   }
 });
+
+// SIDEBAR LOGIC
+const hamburger = document.querySelector(".hamburger");
+const sidebar = document.getElementById("sidebar");
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+// Close sidebar when clicking outside
+document.addEventListener("click", (event) => {
+  if (
+    !sidebar.contains(event.target) &&
+    !sidebarToggle.contains(event.target)
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+// Close sidebar when clicking on a link
+const sidebarLinks = document.querySelectorAll(".sidebar-links a");
+sidebarLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+  });
+});
