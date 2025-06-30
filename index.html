@@ -6,60 +6,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <title>Brewery</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
     <script
       src="https://kit.fontawesome.com/6a8bed72e4.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <!------ NAVBAR ------>
+    <!------ HEADER ------>
 
-    <nav class="navbar">
-      <div class="logo"><a href="#home">BREWERY</a></div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-icons">
-        <a href="#search" class="nav-icon"
-          ><i class="fa-solid fa-magnifying-glass search-icon"></i
-        ></a>
-        <!-- <a href="#cart" class="nav-icon"
-          ><i class="fa-solid fa-cart-shopping"></i
-        ></a> -->
-        <a href="#hamburger" class="nav-icon hamburger">
-          <i class="fa-solid fa-bars"></i>
-        </a>
-      </div>
+    <header class="header">
+      <!------ NAVBAR ------>
 
-      <!-- sidebar for mobile view -->
-      <div class="sidebar" id="sidebar">
-        <ul class="sidebar-links">
+      <nav class="navbar">
+        <div class="logo"><a href="#home">BREWERY</a></div>
+        <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-    </nav>
+        <div class="nav-icons">
+          <a href="#search" class="nav-icon"
+            ><i class="fa-solid fa-magnifying-glass search-icon"></i
+          ></a>
+          <!-- <a href="#cart" class="nav-icon"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a> -->
+          <a href="#hamburger" class="nav-icon hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </div>
+
+        <!-- sidebar for mobile view -->
+        <div class="sidebar" id="sidebar">
+          <ul class="sidebar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <!------ MAIN CONTENT ------>
 
-    <main>
+    <main class="main-content">
       <!------ HERO SECTION ------>
 
       <section class="hero" id="home">
         <div class="hero-content">
-          <h1>Welcome to Coffee Shop</h1>
+          <div class="section-title hero-heading">
+            <h1>Welcome to Brewery</h1>
+          </div>
           <p>
             Your daily dose of happiness in a cup. Whether you’re kickstarting
             your morning or taking a well-deserved break, every sip at Coffee
@@ -71,19 +76,25 @@
         </div>
         <div class="carousel">
           <div class="carousel-images">
-            <img
-              src="public/pexels-rachel-claire-5864550.jpg"
-              alt="Cozy Coffee Shop"
-              class="active"
-            />
-            <img
-              src="public/pexels-nastyasensei-66707-331107.jpg"
-              alt="Fresh Coffee Cup"
-            />
-            <img
-              src="public/pexels-thngocbich-1658112.jpg"
-              alt="Delicious Pastries"
-            />
+            <div class="carousel-image">
+              <img
+                src="public/pexels-rachel-claire-5864550.jpg"
+                alt="Cozy Coffee Shop"
+                class="active"
+              />
+            </div>
+            <div class="carousel-image">
+              <img
+                src="public/pexels-nastyasensei-66707-331107.jpg"
+                alt="Fresh Coffee Cup"
+              />
+            </div>
+            <div class="carousel-image">
+              <img
+                src="public/pexels-thngocbich-1658112.jpg"
+                alt="Delicious Pastries"
+              />
+            </div>
           </div>
           <button class="carousel-btn prev">&#10094;</button>
           <button class="carousel-btn next">&#10095;</button>
@@ -100,9 +111,11 @@
           />
         </div>
         <div class="about-content">
-          <h2>About Us</h2>
+          <div class="section-title about-heading">
+            <h2>About Us</h2>
+          </div>
           <p>
-            At Coffee Shop, we believe in serving the finest coffee and pastries
+            At Brewery, we believe in serving the finest coffee and pastries
             with a smile. Our baristas are passionate about crafting the perfect
             cup of coffee just for you. Whether you're grabbing a quick espresso
             on the way to work or settling in with a latte and a good book,
@@ -116,7 +129,9 @@
       <!------ MENU SECTION ------>
 
       <section class="menu" id="menu">
-        <h2>Our Menu</h2>
+        <div class="section-title menu-heading">
+          <h2>Our Menu</h2>
+        </div>
 
         <!-- Menu Categories -->
         <div class="menu-categories">
@@ -271,7 +286,9 @@
 
       <section class="contact" id="contact">
         <div class="contact-form-header">
-          <h2>Reach Us</h2>
+          <div class="section-title contact-heading">
+            <h2>Reach Us</h2>
+          </div>
         </div>
 
         <div class="contact-form-body">
@@ -317,7 +334,7 @@
       <!------ REVIEWS SECTION ------>
 
       <section class="reviews" id="reviews">
-        <div class="reviews-header">
+        <div class="section-title reviews-header">
           <h2>What Our Customers Say</h2>
         </div>
 
@@ -484,9 +501,11 @@
     </footer>
 
     <!------ JAVASCRIPT ------>
+
     <script src="app.js"></script>
 
-    <!-- Welcome Modal -->
+    <!------ WELCOME MODAL ------->
+
     <div id="welcome-modal" class="modal">
       <div class="modal-content">
         <h2>Welcome to Website!</h2>

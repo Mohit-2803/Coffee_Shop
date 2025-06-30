@@ -28,7 +28,7 @@ setInterval(() => {
 // Navbar blur effect Logic
 
 window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector(".header");
   if (window.scrollY > 10) {
     navbar.classList.add("scrolled");
   } else {
