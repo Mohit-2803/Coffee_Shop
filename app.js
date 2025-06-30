@@ -184,10 +184,7 @@ hamburger.addEventListener("click", () => {
 });
 // Close sidebar when clicking outside
 document.addEventListener("click", (event) => {
-  if (
-    !sidebar.contains(event.target) &&
-    !sidebarToggle.contains(event.target)
-  ) {
+  if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
     sidebar.classList.remove("active");
   }
 });
