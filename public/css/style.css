@@ -795,6 +795,7 @@ body {
   .hero {
     max-height: 60vh;
     padding: 1rem;
+    padding-top: 5rem;
   }
   .hero-content {
     max-width: 90%;
