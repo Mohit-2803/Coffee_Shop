@@ -35,16 +35,17 @@ body {
 }
 
 .sidebar {
-  display: none;
+  display: block;
   position: fixed;
   top: 64px;
-  right: 0;
+  right: -150px;
   width: 150px;
   height: fit-content;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1001;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(5px);
+  transition: transform 0.4s ease-in-out;
 }
 .sidebar-links {
   list-style: none;
@@ -60,7 +61,7 @@ body {
   font-size: 1rem;
 }
 .sidebar.active {
-  display: block;
+  transform: translateX(-100%);
 }
 
 .nav-links {
@@ -800,7 +801,7 @@ body {
   .carousel-images img {
     height: 60vh;
     object-fit: cover;
-    filter: brightness(0.3);
+    filter: brightness(0.5);
   }
   .carousel-btn {
     font-size: 1.5rem;
