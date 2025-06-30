@@ -26,13 +26,12 @@ body {
 /* NAVBAR STYLES */
 
 .header {
-  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
   background: var(--light-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden;
+  position: fixed;
 }
 
 .navbar {
@@ -44,7 +43,7 @@ body {
 
 .sidebar {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 64px;
   right: 0;
   width: 100%;
